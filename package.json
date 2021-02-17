@@ -1,0 +1,41 @@
+{
+  "name": "live2d-for-web-example",
+  "version": "1.0.0",
+  "description": "Live2D Cubism SDK for Webのサンプルコード",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-cli serve --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astie-dog/live2d-for-web-example.git"
+  },
+  "keywords": [],
+  "author": "ASTIE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astie-dog/live2d-for-web-example/issues"
+  },
+  "homepage": "https://github.com/astie-dog/live2d-for-web-example#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.16",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "core-js": "^3.8.3",
+    "html-webpack-plugin": "^4.5.1",
+    "typescript": "^4.1.5",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

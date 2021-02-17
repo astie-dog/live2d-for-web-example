@@ -1,0 +1,68 @@
+{
+  "live2d-for-web-example": {
+    "configuration": {
+      "config": {
+        "configName": "config",
+        "topScope": [
+          "const path = require('path');",
+          "const webpack = require('webpack');",
+          "\n",
+          "/*\n * We've enabled MiniCssExtractPlugin for you. This allows your app to\n * use css modules that will be moved into a separate CSS file instead of inside\n * one of your module entries!\n *\n * https://github.com/webpack-contrib/mini-css-extract-plugin\n *\n */",
+          "const MiniCssExtractPlugin = require('mini-css-extract-plugin');",
+          "\n",
+          "const HtmlWebpackPlugin = require('html-webpack-plugin')",
+          "\n",
+          "/*\n * We've enabled HtmlWebpackPlugin for you! This generates a html\n * page for you when you compile webpack, which will make you start\n * developing and prototyping faster.\n *\n * https://github.com/jantimon/html-webpack-plugin\n *\n */"
+        ],
+        "webpackOptions": {
+          "mode": "'development'",
+          "entry": "'./src/index.ts'",
+          "plugins": [
+            "new webpack.ProgressPlugin()",
+            "new MiniCssExtractPlugin({ filename:'main.[contenthash].css' })",
+            "new HtmlWebpackPlugin({\n\t\t\t\t\ttemplate: 'index.html'\n\t\t\t\t})"
+          ],
+          "module": {
+            "rules": [
+              {
+                "test": "/\\.(ts|tsx)$/",
+                "loader": "'ts-loader'",
+                "include": [
+                  "path.resolve(__dirname, 'src')"
+                ],
+                "exclude": [
+                  "/node_modules/"
+                ]
+              },
+              {
+                "test": "/.css$/",
+                "use": [
+                  {
+                    "loader": "MiniCssExtractPlugin.loader"
+                  },
+                  {
+                    "loader": "\"css-loader\"",
+                    "options": {
+                      "sourceMap": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "resolve": {
+            "extensions": [
+              "'.tsx'",
+              "'.ts'",
+              "'.js'"
+            ]
+          },
+          "devServer": {
+            "open": true,
+            "host": "'localhost'"
+          }
+        }
+      }
+    }
+  }
+}
