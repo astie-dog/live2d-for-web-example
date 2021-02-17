@@ -5,12 +5,12 @@ import { getAngle, getDistance } from './util/MathUtil'
 const canvas = document.getElementById('canvas') as HTMLCanvasElement
 
 const MODEL_FILES = {
-  moc3: './model/Hiyori/Hiyori.moc3',
-  model3: './model/Hiyori/Hiyori.model3.json',
-  physics3: './model/Hiyori/Hiyori.physics3.json',
+  moc3: './model/Hiyori/hiyori.moc3',
+  model3: './model/Hiyori/hiyori.model3.json',
+  physics3: './model/Hiyori/hiyori.physics3.json',
   textures: [
-    './model/Hiyori/Hiyori.2048/texture_00.png',
-    './model/Hiyori/Hiyori.2048/texture_01.png'
+    './model/Hiyori/hiyori.2048/texture_00.png',
+    './model/Hiyori/hiyori.2048/texture_01.png'
   ]
 }
 
