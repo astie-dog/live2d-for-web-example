@@ -1,6 +1,7 @@
 # live2d-for-web-example
 
 このコードについて詳しくはブログ記事を参照ください
+https://astie.dog/blog/posts/mevdzj-4dsm
 
 ## 注意
 
